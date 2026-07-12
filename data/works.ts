@@ -74,7 +74,7 @@ export const works: Work[] = [
     solution:
       "Googleカレンダーと連携して空き時間を自動抽出し、LINE・メール用の送信文章まで自動生成するツールで解決しました。",
     tags: ["Python", "Streamlit", "Google Calendar API", "OAuth 2.0"],
-    demoUrl: "https://my-tool-xpv5memhwjfqnsupvuudfk.streamlit.app",
+    demoUrl: "https://schedule-adjustment-tool-eap349ikdfvjevnzg55qi7.streamlit.app",
     githubUrl: "https://github.com/moedaichi0629-ai/schedule-adjustment-tool",
   },
   {
