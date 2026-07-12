@@ -1,3 +1,4 @@
+import Image from "next/image";
 import RevealOnScroll from "./RevealOnScroll";
 
 const GITHUB_URL = "https://github.com/moedaichi0629-ai";
@@ -18,8 +19,15 @@ export default function Profile() {
         <RevealOnScroll delayMs={100}>
           <div className="mt-14 grid md:grid-cols-[auto_1fr] gap-10 items-center bg-white rounded-3xl border border-border p-8 sm:p-10">
             <div className="flex justify-center">
-              <div className="w-32 h-32 sm:w-36 sm:h-36 rounded-full bg-gradient-to-br from-accent to-accent-dark flex items-center justify-center text-white text-5xl font-bold shadow-[0_12px_32px_rgba(46,107,230,0.28)]">
-                も
+              <div className="relative w-32 h-32 sm:w-36 sm:h-36 rounded-full overflow-hidden shadow-[0_12px_32px_rgba(46,107,230,0.28)]">
+                <Image
+                  src="/landing-page/profile.png"
+                  alt="もえ"
+                  fill
+                  sizes="144px"
+                  className="object-cover"
+                  priority
+                />
               </div>
             </div>
 
