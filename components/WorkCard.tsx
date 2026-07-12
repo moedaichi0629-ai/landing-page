@@ -1,13 +1,26 @@
+import Image from "next/image";
 import type { Work } from "@/data/works";
 
 export default function WorkCard({ work }: { work: Work }) {
   return (
     <article className="group flex flex-col h-full bg-white rounded-3xl border border-border overflow-hidden shadow-[0_1px_2px_rgba(20,24,31,0.04)] hover:shadow-[0_16px_36px_rgba(20,24,31,0.10)] hover:-translate-y-1 transition-all duration-300">
       {/* ビジュアル */}
-      <div className="relative h-40 flex items-center justify-center bg-gradient-to-br from-accent-soft to-white">
-        <span className="text-5xl" aria-hidden>
-          {work.icon}
-        </span>
+      <div className="relative h-40 bg-gradient-to-br from-accent-soft to-white overflow-hidden">
+        {work.image ? (
+          <Image
+            src={work.image}
+            alt={`${work.title}の画面`}
+            fill
+            sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+            className="object-cover object-top"
+          />
+        ) : (
+          <div className="h-full flex items-center justify-center">
+            <span className="text-5xl" aria-hidden>
+              {work.icon}
+            </span>
+          </div>
+        )}
       </div>
 
       <div className="flex flex-col flex-1 p-7">
