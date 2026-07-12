@@ -2,18 +2,24 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #0f172a;
-  --navy: #0f2447;
-  --navy-light: #1a3a6e;
-  --accent: #3b82f6;
+  --surface-alt: #f6f8fb;
+  --foreground: #14181f;
+  --muted: #5b6472;
+  --border: #e6e9ef;
+  --accent: #2e6be6;
+  --accent-dark: #1e4fbe;
+  --accent-soft: #eef3ff;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-surface-alt: var(--surface-alt);
   --color-foreground: var(--foreground);
-  --color-navy: var(--navy);
-  --color-navy-light: var(--navy-light);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
   --color-accent: var(--accent);
+  --color-accent-dark: var(--accent-dark);
+  --color-accent-soft: var(--accent-soft);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -26,4 +32,37 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* スクロール追従ヘッダー分のオフセット（アンカーリンクで見出しが隠れないように） */
+section[id] {
+  scroll-margin-top: 88px;
+}
+
+/* フェードイン演出の初期状態。JS(IntersectionObserver)がis-visibleを付与する */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

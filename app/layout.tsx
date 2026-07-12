@@ -7,9 +7,28 @@ const geist = Geist({
   subsets: ["latin"],
 });
 
+const SITE_URL = "https://moedaichi0629-ai.github.io/landing-page/";
+const TITLE = "Moe | AI Developer Portfolio";
+const DESCRIPTION =
+  "AI・Webアプリ・API連携を活用し、業務効率化やホームページ制作を行っています。";
+
 export const metadata: Metadata = {
-  title: "永田もえ | Portfolio",
-  description: "AIを活用した自動化ツールを開発しています",
+  metadataBase: new URL(SITE_URL),
+  title: TITLE,
+  description: DESCRIPTION,
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: SITE_URL,
+    siteName: TITLE,
+    locale: "ja_JP",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
 };
 
 export default function RootLayout({
