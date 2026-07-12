@@ -42,6 +42,7 @@ export const works: Work[] = [
   {
     id: "writing-correction-tool",
     icon: "✍️",
+    image: "/landing-page/works/writing-correction-tool.png",
     title: "文章添削AI",
     target: "LINEやメールの文面に毎回悩む個人事業主・店舗スタッフに向けて、",
     problem: "「失礼にならないか不安」「文章を考える時間がもったいない」という課題を、",
