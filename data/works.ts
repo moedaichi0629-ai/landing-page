@@ -1,8 +1,6 @@
 export type Work = {
   id: string;
   icon: string;
-  /** 実際のスクリーンショット(/works/配下)。未指定の場合はiconのタイル表示になる */
-  image?: string;
   title: string;
   target: string;
   problem: string;
@@ -17,7 +15,6 @@ export const works: Work[] = [
   {
     id: "hp-tataki-generator",
     icon: "🗺️",
-    image: "/landing-page/works/hp-tataki-generator.png",
     title: "Googleマップ×ホームページ生成",
     target: "ホームページを持っていない個人店舗・小規模事業者の方に向けて、",
     problem: "「HPが欲しいけど何を書けばいいか分からない」「制作会社に頼むと高い」という課題を、",
@@ -29,7 +26,6 @@ export const works: Work[] = [
   {
     id: "todo-app",
     icon: "✅",
-    image: "/landing-page/works/todo-app.png",
     title: "Todoアプリ",
     target: "タスク管理をメモ帳やLINEで済ませている個人・小さなチームに向けて、",
     problem: "「進捗が埋もれる」「期限が管理できていない」という課題を、",
@@ -42,7 +38,6 @@ export const works: Work[] = [
   {
     id: "writing-correction-tool",
     icon: "✍️",
-    image: "/landing-page/works/writing-correction-tool.png",
     title: "文章添削AI",
     target: "LINEやメールの文面に毎回悩む個人事業主・店舗スタッフに向けて、",
     problem: "「失礼にならないか不安」「文章を考える時間がもったいない」という課題を、",
@@ -55,7 +50,6 @@ export const works: Work[] = [
   {
     id: "kabuki-chatbot",
     icon: "🎭",
-    image: "/landing-page/works/kabuki-chatbot.png",
     title: "歌舞伎予習AI",
     target: "観劇の予定はあるものの予習の時間が取れない方に向けて、",
     problem: "「あらすじや役者が分からないまま観に行くのは不安」という課題を、",
@@ -68,7 +62,6 @@ export const works: Work[] = [
   {
     id: "schedule-adjustment-tool",
     icon: "📅",
-    image: "/landing-page/works/schedule-adjustment-tool.png",
     title: "日程調整ツール",
     target: "商談・面談の日程調整に毎回時間を取られている個人事業主・営業担当の方に向けて、",
     problem: "「候補日を出すのに時間がかかる」「ダブルブッキングが心配」という課題を、",
@@ -81,7 +74,6 @@ export const works: Work[] = [
   {
     id: "line-automation",
     icon: "🍽️",
-    image: "/landing-page/works/line-automation.png",
     title: "LINE自動化ツール",
     target: "日々のちょっとした記録をLINEで済ませたい方・店舗に向けて、",
     problem: "「記録が続かない」「スプレッドシートを開くのが面倒」という課題を、",
