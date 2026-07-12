@@ -68,6 +68,7 @@ export const works: Work[] = [
   {
     id: "schedule-adjustment-tool",
     icon: "📅",
+    image: "/landing-page/works/schedule-adjustment-tool.png",
     title: "日程調整ツール",
     target: "商談・面談の日程調整に毎回時間を取られている個人事業主・営業担当の方に向けて、",
     problem: "「候補日を出すのに時間がかかる」「ダブルブッキングが心配」という課題を、",
