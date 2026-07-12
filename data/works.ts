@@ -81,6 +81,7 @@ export const works: Work[] = [
   {
     id: "line-automation",
     icon: "🍽️",
+    image: "/landing-page/works/line-automation.png",
     title: "LINE自動化ツール",
     target: "日々のちょっとした記録をLINEで済ませたい方・店舗に向けて、",
     problem: "「記録が続かない」「スプレッドシートを開くのが面倒」という課題を、",
