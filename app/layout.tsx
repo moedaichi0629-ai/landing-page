@@ -36,6 +36,11 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="ja" className={`${geist.variable} scroll-smooth`}>
+      <head>
+        {/* ポートフォリオは新サイトへ移転済み */}
+        <meta httpEquiv="refresh" content="0; url=https://moedaichi0629-ai.github.io/" />
+        <link rel="canonical" href="https://moedaichi0629-ai.github.io/" />
+      </head>
       <body className="min-h-screen antialiased">{children}</body>
     </html>
   );
